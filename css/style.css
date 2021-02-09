@@ -3,3 +3,47 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.container {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(#eeee,#000);
+}
+
+.container select {
+    width: 10%;
+    margin-top: 30px;
+    padding: 5px 0;
+    text-align: center;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.box-card {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.box-card .card {
+    width: calc(100% / 5);
+    text-align: center;
+    padding-top: 20px;
+}
+
+.box-card .card img {
+    width: 70%;
+    height: 80%;
+}
+
+.box-card .card h3 {
+    color: #a52a2a;
+}
+
+.box-card .card h4,
+.box-card .card h6 {
+    color: #fff;
+}
