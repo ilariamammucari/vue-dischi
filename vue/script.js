@@ -12,6 +12,7 @@ var app = new Vue({
 
             this.dischi = result.data.response;
 
+            this.ordinaDischi();
             this.filtroGeneri();
         });
     },
@@ -22,6 +23,9 @@ var app = new Vue({
                     this.generi.push(element.genre);
                 }
             });
+        },
+        ordinaDischi(){
+            this.dischi.sort((discoA,discoB) => discoA.year - discoB.year);
         }
     }
 });
