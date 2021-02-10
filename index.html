@@ -12,16 +12,16 @@
 </head>
 <body>
 
-    <div id="root" class="container" v-if="dischi.length == 10">
+    <div id="root" class="container" v-if="dischi.length">
         <h1>Seleziona il genere</h1>
-        <select class="gen" v-model="valoreGenere">
+        <select v-model="valoreGenere">
             <option value="">Tutti i generi</option>
             <option v-for="genere in generi" :value="genere">{{ genere }}</option>
         </select>
 
         <div class="box-card" v-if="dischi.length">
             <div v-for="disco in dischi" class="card" v-if="disco.genre == valoreGenere || valoreGenere == ''">
-                <img :src="disco.poster" alt="poster">
+                <img :src="disco.poster" :alt="disco.title">
                 <h3 class="titolo-disco">{{ disco.title }}</h3>
                 <h4 class="nome-autore">{{ disco.author }}</h4>
                 <h6 class="anno">{{ disco.year }}</h6>
